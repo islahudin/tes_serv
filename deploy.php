@@ -10,4 +10,22 @@
 // $output = shell_exec('cd /public_html/goapi.qordinate.com/tes_serv && git pull origin main 2>&1');
 // echo "<pre>$output</pre>";
 
-echo shell_exec('whoami');
+// echo shell_exec('whoami');
+
+
+$dir = '/public_html/goapi.qordinate.com/tes_serv';
+$command = "cd $dir && git pull origin main 2>&1";
+$output = shell_exec($command);
+
+if (!$output) {
+    echo "Error: shell_exec returned no output. Possible issues:";
+    echo "<ul>";
+    echo "<li>shell_exec may be disabled on your server.</li>";
+    echo "<li>Path to Git might be incorrect or Git is not installed.</li>";
+    echo "<li>Directory permissions might be misconfigured.</li>";
+    echo "</ul>";
+} else {
+    echo "<pre>$output</pre>";
+}
+
+
