@@ -6,5 +6,8 @@
 //     http_response_code(403);
 //     die('Unauthorized');
 // }
-$output = shell_exec('cd /public_html/goapi.qordinate.com/tes_serv && git pull origin main 2>&1');
-echo "<pre>$output</pre>";
+
+// $output = shell_exec('cd /public_html/goapi.qordinate.com/tes_serv && git pull origin main 2>&1');
+// echo "<pre>$output</pre>";
+
+echo shell_exec('whoami');
