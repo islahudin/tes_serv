@@ -14,7 +14,7 @@
 
 
 // $dir = '/public_html/goapi.qordinate.com/tes_serv';
-$dir = '/www/wwwroot/merantiapi.qordinate.com/tes_serv';
+$dir = 'www/wwwroot/merantiapi.qordinate.com/tes_serv';
 $command = "cd $dir && git pull origin main 2>&1";
 $output = shell_exec($command);
 
